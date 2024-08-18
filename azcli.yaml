@@ -5,8 +5,5 @@
   become: false
   gather_facts: false
   tasks:
-  - name: create resource group
-    azure_rm_resourcegroup:
-      name: vinodh
-      location: westus
-      state: absent
+  - name: "az login"
+    command: "az login"
