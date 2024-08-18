@@ -2,7 +2,9 @@
 - name: test ansible connection
   hosts: localhost
   connection: localhost
-  become: false
+  become: true
+  become_user: root
+  become_method: sudo
   gather_facts: false
   tasks:
   - name: create resource group
