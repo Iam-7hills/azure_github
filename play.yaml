@@ -9,3 +9,4 @@
     azure_rm_resourcegroup:
       name: vinodh
       location: westus
+      state: absent
