@@ -6,6 +6,6 @@
   gather_facts: false
   tasks:
   - name: create resource group
-    azure_rm_deployment:
+    azure_rm_resourcegroup:
       resource_group_name: vinodh
       location: westus
