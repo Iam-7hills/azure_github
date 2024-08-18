@@ -1,9 +1,12 @@
 ---
-- name: test ansible connection
+- name: Create Azure Resource Group
   hosts: localhost
-  connection: localhost
-  become: false
-  gather_facts: false
   tasks:
-  - name: "az login"
-    command: "az login"
+    - name: Create resource group using Azure CLI
+      shell: az group create --name myResourceGroup --location eastus
+      register: output
+
+    - name: Display output
+      debug:
+        var: output.stdout
+
