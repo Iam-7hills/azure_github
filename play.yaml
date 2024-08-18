@@ -1,19 +1,11 @@
 ---
-- name: Get facts of a VM
+- name: test ansible connection
   hosts: localhost
-  connection: local
-  become: false
+  connection: localhost
+  become: falso
   gather_facts: false
-
   tasks:
-
-  #- name: Destroy Azure Deploy
-  #  azure_rm_deployment:
-  #    resource_group: tju-ResourceGroup
-  #    name: tju-testDeployment
-  #    state: absent
-
-  - name: Create Azure Resource Group deployment
+  - name: create resource group
     azure_rm_deployment:
-      resource_group_name: tju-ResourceGroup
+	  resource_group_name: testresourcegroupfromawx
 	  location: westus
