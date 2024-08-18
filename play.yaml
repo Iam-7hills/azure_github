@@ -4,7 +4,6 @@
   connection: localhost
   become: true
   become_user: root
-  become_method: sudo
   gather_facts: false
   tasks:
   - name: create resource group
