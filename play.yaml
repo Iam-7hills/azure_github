@@ -1,7 +1,19 @@
-- name: Create a resource group
-  azure_rm_resourcegroup:
-    name: myResourceGroup
-    location: westus
-    tags:
-      testing: testing
-      delete: never
+---
+- name: Get facts of a VM
+  hosts: localhost
+  connection: local
+  become: false
+  gather_facts: false
+
+  tasks:
+
+  #- name: Destroy Azure Deploy
+  #  azure_rm_deployment:
+  #    resource_group: tju-ResourceGroup
+  #    name: tju-testDeployment
+  #    state: absent
+
+  - name: Create Azure Resource Group deployment
+    azure_rm_deployment:
+      resource_group_name: tju-ResourceGroup
+	  location: westus
