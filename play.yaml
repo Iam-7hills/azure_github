@@ -7,5 +7,5 @@
   tasks:
   - name: create resource group
     azure_rm_resourcegroup:
-      name: vinodh
+      name: rg_az204
       location: westus
