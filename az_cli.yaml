@@ -1,0 +1,3 @@
+- name: "az cli login"
+  command: "az login"
+  delegate_to: localhost
