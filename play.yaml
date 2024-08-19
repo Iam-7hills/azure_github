@@ -18,3 +18,15 @@
       sku: F1
       is_linux: true
       number_of_workers: 1
+  - name: Create a docker webapp
+    azure_rm_webapp:
+      resource_group: vinodh
+      name: myfirstwebapp_fromansibleplaybook
+      plan:
+        resource_group: vinodh
+        name: vinodh_plan
+        is_linux: true
+        sku: F1
+        number_of_workers: 1
+      container_settings:
+        name: iam7hills/dockerdemo:keyvaultwebapp
