@@ -9,4 +9,12 @@
     azure_rm_resourcegroup:
       name: vinodh
       location: westus
-      state: absent
+      state: present
+  - name: create service plan
+    azure_rm_serviceplan:
+      resource_group: vinodh
+      name: vinodh_plan
+      location: westus
+      sku: F1
+      is_linux: true
+      number_of_workers: 1
