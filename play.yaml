@@ -21,7 +21,7 @@
   - name: Create a docker webapp
     azure_rm_webapp:
       resource_group: vinodh
-      name: myfirstwebapp_fromansibleplaybook
+      name: AppFromAnsible
       plan:
         resource_group: vinodh
         name: vinodh_plan
