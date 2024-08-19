@@ -11,7 +11,7 @@
       location: westus
       state: present
   - name: create service plan
-    azure_rm_serviceplan:
+    azure_rm_appserviceplan:
       resource_group: vinodh
       name: vinodh_plan
       location: westus
