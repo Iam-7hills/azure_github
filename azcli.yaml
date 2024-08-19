@@ -1,6 +1,10 @@
 ---
 - name: Create Azure Resource Group
-  hosts: localhost
+  hosts: all
+  roles:
+    - azcli
+  vars:
+    azcli_version: 2.60.0
   tasks:
     - name: Create resource group using Azure CLI
       shell: az group create --name myResourceGroup --location eastus
